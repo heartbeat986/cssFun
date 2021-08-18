@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>倒影</title>
+  <style>
+    .box {
+      background-image: url('./ab.jpg');
+      object-fit: contain;
+      background-size: 100% 100%;
+      width: 200px;
+      height: 200px;
+      position: relative;
+      /* 方法一：兼容性差 */
+      /* -webkit-box-reflect: below; */
+    }
+
+    /* 方法二 */
+    .box::after {
+      content: '';
+      transform: rotateX(180deg);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      bottom: -100%;
+      background-image: inherit;
+      background-size: 100% 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      position: relative;
+    }
+
+    .red {
+      height: 100px;
+      width: 150px;
+      background-color: red;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .little {
+      position: absolute;
+      right: 0;
+      bottom: -20px;
+      height: 20px;
+      width: 100px;
+      background-color: yellow;
+      z-index: 1001;
+    }
+
+    .blue {
+      position: relative;
+      z-index: 999;
+      height: 100px;
+      width: 150px;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="red">
+    <div class="little"></div>
+  </div>
+  <div class="blue"></div>
+</body>
+
+</html>
